@@ -1,0 +1,15 @@
+alive-lens-app/*.iml
+alive-lens-app/.gradle
+alive-lens-app/local.properties
+alive-lens-app/.idea/caches
+alive-lens-app/.idea/libraries
+alive-lens-app/.idea/modules.xml
+alive-lens-app/.idea/workspace.xml
+alive-lens-app/.idea/navEditor.xml
+alive-lens-app/.idea/assetWizardSettings.xml
+alive-lens-app/.DS_Store
+alive-lens-app/build
+alive-lens-app/captures
+alive-lens-app/.externalNativeBuild
+alive-lens-app/.cxx
+alive-lens-app/local.properties
