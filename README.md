@@ -22,6 +22,5 @@ no whatsapp e instagram.
 
 ## Contribuidores
 
-- Victor Henrique: 
-- Gabriel Lampert do Amaral
-- Fernando de Barros: 
+- Victor Henrique: https://github.com/VictorHenrique111007
+- Gabriel Lampert do Amaral: https://github.com/gabriellampert
