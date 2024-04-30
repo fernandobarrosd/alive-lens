@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Alive Lens</string>
+    <string name="email_hint">E-mail</string>
+    <string name="password_hint">Senha</string>
+    <string name="username_hint">Nome de usuário</string>
+    <string name="email_or_password_hint">E-mail ou telefone</string>
 </resources>

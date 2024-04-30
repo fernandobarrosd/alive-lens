@@ -1,9 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AliveLens" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.AliveLens" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="statusBarForeground">@color/primary_color</item>
     </style>
 
-    <style name="Theme.AliveLens" parent="Base.Theme.AliveLens" />
+    <style name="Theme.AliveLens.Toolbar.Title" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>
