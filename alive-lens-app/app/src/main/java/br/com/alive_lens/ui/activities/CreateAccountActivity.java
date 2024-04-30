@@ -15,6 +15,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityCreateAccountBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
     }
 
     @Override
