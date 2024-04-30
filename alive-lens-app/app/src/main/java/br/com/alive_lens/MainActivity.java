@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             activityClass = LoginActivity.class;
         }
         startActivity(new Intent(this, activityClass));
+        finish();
     }
 
     private boolean isAuthenticated() {
