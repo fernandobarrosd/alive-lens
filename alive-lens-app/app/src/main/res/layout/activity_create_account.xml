@@ -38,7 +38,6 @@
         android:layout_height="50dp"
         android:background="@drawable/rounded_bg_input"
         android:hint="@string/email_or_password_hint"
-        android:inputType="textEmailAddress|phone"
         android:paddingHorizontal="20dp"
         android:textColorHint="@color/white"
         android:textSize="15sp"
