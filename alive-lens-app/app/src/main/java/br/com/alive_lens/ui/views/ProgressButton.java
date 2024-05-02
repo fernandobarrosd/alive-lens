@@ -1,16 +1,12 @@
 package br.com.alive_lens.ui.views;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.opengl.Visibility;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.LinearLayoutCompat;
-
 import br.com.alive_lens.R;
 import br.com.alive_lens.databinding.LayoutProgressButtonBinding;
 
