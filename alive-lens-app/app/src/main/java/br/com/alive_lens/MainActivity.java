@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
-
-import com.google.firebase.auth.FirebaseAuth;
 import br.com.alive_lens.ui.activities.AuthenticatedActivity;
 import br.com.alive_lens.ui.activities.LoginActivity;
 import br.com.alive_lens.ui.view_models.MainViewModel;
