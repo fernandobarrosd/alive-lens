@@ -16,16 +16,19 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
-        binding.btnGoToCreateAccount.setOnClickListener(view -> {
-            Intent createAccountIntent = new Intent(this, CreateAccountActivity.class);
-            startActivity(createAccountIntent);
+
+        binding.textGoToCreateAccount.setOnClickListener(view -> {
+            Intent intent = new Intent(this, CreateAccountActivity.class);
+            startActivity(intent);
         });
 
         binding.btnLoginEmailAndPassword.setOnClickListener(view -> {
-            // Aqui vai ficar a lógica do login com email e senha
+            binding.btnLoginEmailAndPassword.showLoading();
+            binding.btnLoginEmailAndPassword.disable();
         });
     }
 

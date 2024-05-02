@@ -48,16 +48,13 @@
 
 
 
-    <androidx.appcompat.widget.AppCompatButton
+
+
+    <br.com.alive_lens.ui.views.ProgressButton
         android:id="@+id/btnLoginEmailAndPassword"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_bg_button"
-        android:padding="20dp"
-        android:text="Entrar"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+        app:buttonText="Entrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -65,8 +62,10 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
         app:layout_constraintVertical_bias="0.14" />
 
+
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/btnGoToCreateAccount"
+        android:id="@+id/textGoToCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Criar uma conta"
