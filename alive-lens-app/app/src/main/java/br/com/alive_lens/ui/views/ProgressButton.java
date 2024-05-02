@@ -54,6 +54,11 @@ public class ProgressButton extends LinearLayoutCompat {
         setActivated(false);
     }
 
+    public void enable() {
+        setClickable(true);
+        setActivated(true);
+    }
+
 
     public void showLoading() {
         binding.buttonText.setVisibility(GONE);
@@ -64,5 +69,4 @@ public class ProgressButton extends LinearLayoutCompat {
         binding.buttonText.setVisibility(VISIBLE);
         binding.progressBar.setVisibility(GONE);
     }
-
 }
