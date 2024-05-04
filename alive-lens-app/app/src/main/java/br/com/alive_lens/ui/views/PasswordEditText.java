@@ -40,6 +40,10 @@ public class PasswordEditText extends ConstraintLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
+        updatePasswordState(PasswordTransformationMethod.getInstance(), R.drawable.eye_slash_icon);
+        isPasswordType = false;
+
+
         binding.passwordVisibilityIcon.setOnClickListener(view -> {
             Log.d("OnClick Eye", String.valueOf(binding.passwordEditText.getInputType()));
             if (isPasswordType) {

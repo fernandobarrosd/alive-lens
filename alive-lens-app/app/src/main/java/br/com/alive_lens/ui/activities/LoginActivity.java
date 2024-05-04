@@ -22,12 +22,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onResume();
 
         binding.textGoToCreateAccount.setOnClickListener(view -> {
-            binding.btnLoginEmailAndPassword.removeLoading();
-            binding.btnLoginEmailAndPassword.enable();
-
-
             Intent intent = new Intent(this, CreateAccountActivity.class);
             startActivity(intent);
+
+            binding.btnLoginEmailAndPassword.removeLoading();
+            binding.btnLoginEmailAndPassword.enable();
         });
 
         binding.btnLoginEmailAndPassword.setOnClickListener(view -> {

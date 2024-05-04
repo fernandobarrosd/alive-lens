@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/homeFragment"
         app:route="home"
-        android:name="br.com.alive_lens.ui.fragments.HomeFragment"
+        android:name="br.com.alive_lens.ui.authenticated.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/messagesFragment"
         app:route="messages"
-        android:name="br.com.alive_lens.ui.fragments.HomeFragment"
+        android:name="br.com.alive_lens.ui.authenticated.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/profileFragment"
         app:route="profile"
-        android:name="br.com.alive_lens.ui.fragments.HomeFragment"
+        android:name="br.com.alive_lens.ui.authenticated.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 </navigation>

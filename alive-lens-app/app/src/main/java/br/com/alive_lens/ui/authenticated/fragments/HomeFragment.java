@@ -1,4 +1,4 @@
-package br.com.alive_lens.ui.fragments;
+package br.com.alive_lens.ui.authenticated.fragments;
 
 import android.os.Bundle;
 
@@ -15,8 +15,10 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(
+            @NonNull LayoutInflater inflater,
+            ViewGroup container,
+            Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }

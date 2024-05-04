@@ -22,15 +22,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         binding.btnContinue.setOnClickListener(view -> {
-            String emailOrTelephone =
-                    Objects.requireNonNull(binding.emailOrTelephoneNumberEditText.getText()).toString();
 
-            if (isEmail(emailOrTelephone)) {
-
-            }
-            else {
-
-            }
         });
     }
 

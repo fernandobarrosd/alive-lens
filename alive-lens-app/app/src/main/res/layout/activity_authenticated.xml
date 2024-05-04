@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.activities.AuthenticatedActivity"
+    tools:context=".ui.authenticated.AuthenticatedActivity"
     android:background="@color/primary_color">
 
     <com.google.android.material.appbar.AppBarLayout
