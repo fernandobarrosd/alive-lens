@@ -2,25 +2,27 @@ package br.com.alive_lens.ui.authenticated;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.HashMap;
 import java.util.Map;
+import br.com.alive_lens.class_utils.ActivityViewBinding;
 import br.com.alive_lens.databinding.ActivityAuthenticatedBinding;
 
-public class AuthenticatedActivity extends AppCompatActivity {
-    private ActivityAuthenticatedBinding binding;
+public class AuthenticatedActivity extends ActivityViewBinding<ActivityAuthenticatedBinding> {
     private NavController navController;
     private static final Map<String, String> TOOLBAR_TITLES = new HashMap<>();
 
     @Override
+    public Class<ActivityAuthenticatedBinding> getViewBindingClass() {
+        return ActivityAuthenticatedBinding.class;
+    }
+
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityAuthenticatedBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
         setupNavController();
         setupNavControllerListener();
         setupBottomNavigationWithNavController();
