@@ -4,26 +4,15 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import java.util.Objects;
+
+import br.com.alive_lens.class_utils.ActivityViewBinding;
 import br.com.alive_lens.databinding.ActivityCreateAccountBinding;
 
-public class CreateAccountActivity extends AppCompatActivity {
-    private ActivityCreateAccountBinding binding;
+public class CreateAccountActivity extends ActivityViewBinding<ActivityCreateAccountBinding> {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityCreateAccountBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        binding.btnContinue.setOnClickListener(view -> {
-
-        });
+    public Class<ActivityCreateAccountBinding> getViewBindingClass() {
+        return ActivityCreateAccountBinding.class;
     }
 
     private boolean isEmail(@NonNull String text) {
