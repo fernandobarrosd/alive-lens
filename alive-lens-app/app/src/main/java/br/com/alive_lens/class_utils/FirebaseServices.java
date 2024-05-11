@@ -1,4 +1,4 @@
-package br.com.alive_lens;
+package br.com.alive_lens.class_utils;
 
 import androidx.annotation.NonNull;
 import com.google.firebase.auth.FirebaseAuth;
