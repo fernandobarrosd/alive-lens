@@ -2,16 +2,11 @@ package br.com.alive_lens.class_utils;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewbinding.ViewBinding;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import br.com.alive_lens.databinding.FragmentHomeBinding;
-import kotlin.Suppress;
 
 public abstract class ActivityViewBinding<T extends ViewBinding> extends AppCompatActivity {
     protected T binding;
@@ -25,7 +20,7 @@ public abstract class ActivityViewBinding<T extends ViewBinding> extends AppComp
         setContentView(binding.getRoot());
     }
 
-    @SuppressWarnings("UNCHECKED_CAST")
+    @SuppressWarnings("unchecked")
     private T executeInflate(LayoutInflater layoutInflater) {
         Class<T> viewBindingClass = getViewBindingClass();
         try {
