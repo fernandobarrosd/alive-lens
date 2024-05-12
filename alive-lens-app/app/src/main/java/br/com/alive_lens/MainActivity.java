@@ -1,10 +1,12 @@
 package br.com.alive_lens;
 
-import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 
+import br.com.alive_lens.class_utils.ActivityUtils;
 import br.com.alive_lens.class_utils.FirebaseServices;
 import br.com.alive_lens.ui.activities.LoginActivity;
 import br.com.alive_lens.ui.authenticated.AuthenticatedActivity;
@@ -22,11 +24,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (isAuthenticated()) {
-            navigateToOtherActivity(AuthenticatedActivity.class);
+            ActivityUtils.navigateToActivity(this, AuthenticatedActivity.class);
         }
         else {
-            navigateToOtherActivity(LoginActivity.class);
+            ActivityUtils.navigateToActivity(this, LoginActivity.class);
         }
+        finish();
     }
 
     private boolean isAuthenticated() {
@@ -34,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
         return firebaseAuth.getCurrentUser() != null;
     }
 
-    public void navigateToOtherActivity(Class<?> activityClass) {
-        startActivity(new Intent(this, activityClass));
-        finish();
-    }
+
 
 }
