@@ -4,4 +4,7 @@
     <string name="password_hint">Senha</string>
     <string name="username_hint">Nome de usuário</string>
     <string name="email_or_password_hint">E-mail ou telefone</string>
+    <string name="show_more_text">Veja mais</string>
+    <string name="like_text">Amo</string>
+    <string name="comment_text">Bater</string>
 </resources>
