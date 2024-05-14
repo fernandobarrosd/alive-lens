@@ -17,6 +17,7 @@ public abstract class FragmentViewBinding<T extends ViewBinding> extends Fragmen
     protected T binding;
     public abstract Class<T> getViewBindingClass();
 
+    @SuppressWarnings("unchecked")
     private T executeInflate(LayoutInflater layoutInflater, ViewGroup container) {
         try {
             Class<T> viewBindingClass = getViewBindingClass();
