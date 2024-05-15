@@ -23,10 +23,11 @@ public class AuthenticatedActivity extends ActivityViewBinding<ActivityAuthentic
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initToolbarTitles();
+        initToolbarTitle();
         setupNavController();
         setupNavControllerListener();
         setupBottomNavigationWithNavController();
-        initToolbarTitles();
     }
 
     private void setupNavController() {
@@ -41,6 +42,10 @@ public class AuthenticatedActivity extends ActivityViewBinding<ActivityAuthentic
         TOOLBAR_TITLES.put("home", "Página inicial");
         TOOLBAR_TITLES.put("messages", "Mensagens");
         TOOLBAR_TITLES.put("profile", "Perfil");
+    }
+
+    private void initToolbarTitle() {
+        binding.toolbarTitle.setText(TOOLBAR_TITLES.get("home"));
     }
 
 
