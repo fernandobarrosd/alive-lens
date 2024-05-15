@@ -13,6 +13,8 @@ import androidx.viewbinding.ViewBinding;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import br.com.alive_lens.databinding.FragmentHomeBinding;
+
 public abstract class FragmentViewBinding<T extends ViewBinding> extends Fragment {
     protected T binding;
     public abstract Class<T> getViewBindingClass();
@@ -25,7 +27,7 @@ public abstract class FragmentViewBinding<T extends ViewBinding> extends Fragmen
                     "inflate",
                     LayoutInflater.class,
                     ViewGroup.class,
-                    Boolean.class);
+                    boolean.class);
             return (T) inflateMethod.invoke(
                     null,
                     layoutInflater,
