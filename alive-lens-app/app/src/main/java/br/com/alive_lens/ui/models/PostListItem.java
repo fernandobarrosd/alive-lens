@@ -13,4 +13,5 @@ public class PostListItem {
     private String content;
     private String mediaURL;
     private Integer likes;
+    private PostOwner postOwner;
 }
