@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary_color">#161616</color>
     <color name="second_color">#323232</color>
+    <color name="skeleton_color">#454545</color>
     <color name="ic_launcher_background">#3A334B</color>
 </resources>
