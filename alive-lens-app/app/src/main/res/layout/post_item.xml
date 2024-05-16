@@ -1,125 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/second_color"
+    android:background="@drawable/post_item_background"
     android:layout_marginBottom="30dp"
     android:paddingTop="10dp"
     android:paddingBottom="20dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profile_card_view"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="@color/primary_color"
+        android:layout_marginStart="15dp"
+        app:cardElevation="0dp"
         app:cardCornerRadius="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/profile_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
-        android:text="Encontrar amigos"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/profile_card_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile_card_view"
+        android:text="fernandobarros"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/profile_card_view"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/post_media_card_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="92dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        app:cardCornerRadius="20dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@android:color/darker_gray"
+        app:cardCornerRadius="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/post_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Personalize sua experiencia com o alive lens"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post_media_card_view" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/show_more_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/show_more_text"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post_content" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
-    <ImageView
-        android:id="@+id/heart_icon"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/like_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:src="@drawable/heart_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post_content" />
+        app:srcCompat="@drawable/heart_icon"
+        android:layout_below="@id/post_media_card_view"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"/>
 
-    <TextView
-        android:id="@+id/like_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/like_text"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/heart_icon"
-        app:layout_constraintTop_toBottomOf="@+id/post_content"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/comment_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/chat_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toEndOf="@id/like_text"
-        app:layout_constraintTop_toBottomOf="@id/post_content"
-        app:layout_constraintVertical_bias="1.0" />
+        app:srcCompat="@drawable/comment_icon"
+        android:layout_alignStart="@id/like_icon"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/post_media_card_view" />
 
-    <TextView
-        android:id="@+id/comment_text"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favorite_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/favorite_icon"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/post_media_card_view"
+        android:layout_alignParentEnd="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/likes_number_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/comment_text"
+        android:text="3125 curtiram"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/comment_icon"
-        app:layout_constraintTop_toBottomOf="@+id/post_content"
-        app:layout_constraintVertical_bias="0.96" />
+        android:layout_alignTop="@id/like_icon"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"/>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/post_owner_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="fernandobarros"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_below="@id/likes_number_text"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/post_content"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/likes_number_text"
+        android:layout_toEndOf="@id/post_owner_username"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:text="Bom dia meu povo!"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>
