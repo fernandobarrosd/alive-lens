@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.glide)
     compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
     implementation(libs.navigation.fragment)
