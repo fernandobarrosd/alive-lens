@@ -4,12 +4,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
-
 import java.util.List;
 import br.com.alive_lens.databinding.PostItemBinding;
 import br.com.alive_lens.ui.models.PostListItem;
@@ -22,6 +19,7 @@ import br.com.alive_lens.R;
 public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final List<PostListItem> posts;
 
+    @Setter
     private boolean isSkeleton;
 
     @NonNull
@@ -44,7 +42,7 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
         if (viewHolder instanceof PostViewHolder) {
-            PostListItem post = posts.get(0);
+            PostListItem post = posts.get(position);
             PostViewHolder postViewHolder = (PostViewHolder) viewHolder;
             postViewHolder.bind(post);
         }
@@ -66,12 +64,9 @@ public class PostAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return posts.size();
     }
 
-    public void setSkeleton(boolean skeleton) {
-        isSkeleton = skeleton;
-    }
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
-        private PostItemBinding binding;
+        private final PostItemBinding binding;
         public PostViewHolder(@NonNull PostItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
