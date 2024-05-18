@@ -9,11 +9,9 @@ import br.com.alive_lens.ui.models.PostOwner;
 
 public class PostsDataSource {
     private static PostsDataSource postsDataSource;
-
-    private List<PostListItem> posts;
+    private final List<PostListItem> posts = new ArrayList<>();
 
     private PostsDataSource() {
-        posts = new ArrayList<>();
         int randomLike = 0;
 
         PostOwner postOwner = PostOwner.builder()
