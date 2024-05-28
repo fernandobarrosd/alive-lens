@@ -1,7 +1,10 @@
 package br.com.alive_lens.ui.auth.fragments;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +23,8 @@ import br.com.alive_lens.ui.authenticated.AuthenticatedActivity;
 public class LoginFragment extends Fragment {
     private FragmentLoginBinding binding;
 
+    private SharedPreferences sharedPreferences;
+
     @Nullable
     @Override
     public View onCreateView(
@@ -33,6 +38,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        sharedPreferences = requireActivity().getSharedPreferences("preferences", Context.MODE_PRIVATE);
         setupListeners();
     }
 
@@ -66,6 +72,11 @@ public class LoginFragment extends Fragment {
 
         firebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnSuccessListener(authResult -> {
+                    sharedPreferences
+                            .edit()
+                            .putBoolean("IS_AUTHENTICATED", true)
+                            .apply();
+
                     startActivity(new Intent(requireActivity(), AuthenticatedActivity.class));
                 })
                 .addOnFailureListener(exception -> showSnackBar("Usuário inexistente"))
