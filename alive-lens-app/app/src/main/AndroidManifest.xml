@@ -28,6 +28,10 @@
         <activity
             android:name=".ui.authenticated.AuthenticatedActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".ui.auth.AuthActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
