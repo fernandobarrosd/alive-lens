@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "452477990319",
-    "project_id": "alive-lens-c8b58",
-    "storage_bucket": "alive-lens-c8b58.appspot.com"
+    "project_number": "772513920641",
+    "project_id": "alive-lens-22707",
+    "storage_bucket": "alive-lens-22707.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:452477990319:android:12c72a5ad0ea9719602b5a",
+        "mobilesdk_app_id": "1:772513920641:android:7c587186f66d3a45157f80",
         "android_client_info": {
           "package_name": "br.com.alive_lens"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "452477990319-f8fkghbcsqmsk3d4ceorgj9cie5h40su.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBNyOiDNOuXjtLWKfXjEkbFFMRG3jDmDSQ"
+          "current_key": "AIzaSyDP2Oen78OeMDHEz6e5ROgfkmwIU0YFDXg"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "452477990319-f8fkghbcsqmsk3d4ceorgj9cie5h40su.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
