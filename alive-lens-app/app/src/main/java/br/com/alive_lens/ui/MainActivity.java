@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import br.com.alive_lens.R;
+import br.com.alive_lens.ui.auth.AuthActivity;
 import br.com.alive_lens.ui.authenticated.AuthenticatedActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
     }
 
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, AuthenticatedActivity.class));
         }
         else {
-
+            startActivity(new Intent(this, AuthActivity.class));
         }
         finish();
     }
@@ -33,7 +33,4 @@ public class MainActivity extends AppCompatActivity {
     private boolean isAuthenticated() {
         return sharedPreferences.getBoolean("IS_AUTHENTICATED", false);
     }
-
-
-
 }
