@@ -1,22 +1,20 @@
 package br.com.alive_lens.ui;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
-
 import br.com.alive_lens.R;
-import br.com.alive_lens.class_utils.ActivityUtils;
-import br.com.alive_lens.class_utils.FirebaseServices;
 import br.com.alive_lens.ui.authenticated.AuthenticatedActivity;
 
 public class MainActivity extends AppCompatActivity {
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
     }
 
 
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (isAuthenticated()) {
-            ActivityUtils.navigateToActivity(this, AuthenticatedActivity.class);
+            startActivity(new Intent(this, AuthenticatedActivity.class));
         }
         else {
 
@@ -33,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isAuthenticated() {
-        FirebaseAuth firebaseAuth = FirebaseServices.getFirebaseAuth();
-        return firebaseAuth.getCurrentUser() != null;
+        return sharedPreferences.getBoolean("IS_AUTHENTICATED", false);
     }
 
 
