@@ -9,7 +9,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import br.com.alive_lens.R;
 import br.com.alive_lens.class_utils.ActivityUtils;
 import br.com.alive_lens.class_utils.FirebaseServices;
-import br.com.alive_lens.ui.activities.LoginActivity;
 import br.com.alive_lens.ui.authenticated.AuthenticatedActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityUtils.navigateToActivity(this, AuthenticatedActivity.class);
         }
         else {
-            ActivityUtils.navigateToActivity(this, LoginActivity.class);
+
         }
         finish();
     }
