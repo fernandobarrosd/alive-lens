@@ -1,7 +1,7 @@
 package br.com.alive_lens.ui.adapters.public_user_status;
 
 import br.com.alive_lens.R;
-import br.com.alive_lens.class_utils.SkeletonAdapter;
+import br.com.alive_lens.ui.adapters.SkeletonAdapter;
 
 public class PublicUserStatusAdapterSkeleton extends SkeletonAdapter {
     @Override

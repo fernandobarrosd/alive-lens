@@ -1,6 +1,6 @@
 package br.com.alive_lens.ui.adapters.post;
 
-import br.com.alive_lens.class_utils.SkeletonAdapter;
+import br.com.alive_lens.ui.adapters.SkeletonAdapter;
 import br.com.alive_lens.R;
 
 public class PostAdapterSkeleton extends SkeletonAdapter {

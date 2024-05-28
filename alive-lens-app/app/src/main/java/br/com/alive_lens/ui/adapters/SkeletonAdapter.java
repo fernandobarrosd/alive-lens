@@ -1,4 +1,4 @@
-package br.com.alive_lens.class_utils;
+package br.com.alive_lens.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
