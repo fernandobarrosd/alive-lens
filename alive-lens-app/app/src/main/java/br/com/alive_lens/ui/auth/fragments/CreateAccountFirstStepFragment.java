@@ -1,5 +1,6 @@
 package br.com.alive_lens.ui.auth.fragments;
 
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,5 +21,15 @@ public class CreateAccountFirstStepFragment extends Fragment {
             @Nullable Bundle savedInstanceState) {
         binding = FragmentCreateAccountFirstStepBinding.inflate(inflater, container, false);
         return binding.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        setupListeners();
+    }
+
+    private void setupListeners() {
+
     }
 }
