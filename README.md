@@ -2,6 +2,8 @@
 
 # Alive Lens (O melhor dos dois mundos)
 
+## Sobre
+
 É um app que tem como principal objetivo juntar o que tem de melhor
 no whatsapp e instagram.
 
