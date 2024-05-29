@@ -8,6 +8,9 @@ no whatsapp e instagram.
 ## Diagrama de Classes
 <img src="alive-lens-class-diagram.png" width="600">
 
+## Diagrama de casos de uso
+<img src="alive-lens-use-case-diagram.png" width="600">
+
 
 ## Telas
 
