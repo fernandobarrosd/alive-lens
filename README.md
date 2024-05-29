@@ -1,3 +1,5 @@
+<img src="alive-lens-project-logo.png" width="100">
+
 # Alive Lens (O melhor dos dois mundos)
 
 ## Sobre
